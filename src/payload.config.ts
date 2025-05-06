@@ -13,6 +13,7 @@ import { Categories } from './collections/Categories'
 import { Products } from './collections/Products'
 import { Banner } from './collections/Banner'
 import { SubCategories } from './collections/SubCategories'
+import { ContactForm } from './collections/ContactForm'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -26,7 +27,7 @@ export default buildConfig({
   },
   cors:['http://localhost:8080','http://localhost:3000'],
   csrf:['http://localhost:8080','http://localhost:3000'],
-  collections: [Users, Media,SubCategories, Categories,Products],
+  collections: [Users, Media,SubCategories, Categories,Products,ContactForm],
   globals:[Banner],
   editor: lexicalEditor({}),
   secret: process.env.PAYLOAD_SECRET || '',
